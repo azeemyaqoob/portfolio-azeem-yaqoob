@@ -7,7 +7,7 @@ import project6 from "./assets/images/images.jpeg"
 export const personalData = {
     name: "Azeem Yaqoob",
     role: "Full Stack Developer",
-    email: "yaqoobazeem740@gmail.com",
+    email: "azeemyaqoob121@gmail.com",
     phone: "+923430429793",
     address: "Lahore, Pakistan",
     about: "I'm a passionate full stack developer with expertise in building web applications using modern technologies. I love solving complex problems and creating efficient, scalable solutions.",
