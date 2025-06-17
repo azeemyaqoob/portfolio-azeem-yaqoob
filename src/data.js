@@ -1,3 +1,9 @@
+import project1 from "./assets/images/podiocrmsystems.png"
+import project2 from "./assets/images/salesforcecrmsystems.png"
+import project3 from "./assets/images/ppcleads to deal.png"
+import project4 from "./assets/images/elite jeans.png"
+import project5 from "./assets/images/portfolio.PNG"
+import project6 from "./assets/images/images.jpeg"
 export const personalData = {
     name: "Azeem Yaqoob",
     role: "Full Stack Developer",
@@ -88,7 +94,7 @@ export const projects = [
         technologies: ["React", "Laravel", "MYSQL", "Stripe Payment"],
         githubLink: "https://github.com/azeemyaqoob/podio-crm-system-using-reactjs-laravel-mysql-stripe-integration?tab=readme-ov-file",
         liveLink: "https://podiocrmsystems.com/",
-        image: "https://private-user-images.githubusercontent.com/52440392/360899781-a8c8e10a-f40e-4afc-afa1-87407018cb39.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTAxMDk5MDMsIm5iZiI6MTc1MDEwOTYwMywicGF0aCI6Ii81MjQ0MDM5Mi8zNjA4OTk3ODEtYThjOGUxMGEtZjQwZS00YWZjLWFmYTEtODc0MDcwMThjYjM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE2VDIxMzMyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdmMTNiZTkyZjY1MTc5ZTNiMDQ3MjY4ZGM4ZGE5YTA5NzhmMjljOGI1YjYxMTNlZGFjODcyYjNlOWIxZWRlZGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.PX9qfJjG0iYKEhT_DFdfNITfxd6vh-ONcHHPL6MowGI"
+        image: project1
     },
     {
         id: 2,
@@ -97,7 +103,7 @@ export const projects = [
         technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
         githubLink: "https://github.com/azeemyaqoob/salesforce-crm-system-MERN",
         liveLink: "http://salesforcecrmsystems.com/",
-        image: "https://private-user-images.githubusercontent.com/52440392/360898818-e24b13a0-8d51-4f35-9096-c2da4fc58915.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTAxMDg2NjcsIm5iZiI6MTc1MDEwODM2NywicGF0aCI6Ii81MjQ0MDM5Mi8zNjA4OTg4MTgtZTI0YjEzYTAtOGQ1MS00ZjM1LTkwOTYtYzJkYTRmYzU4OTE1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE2VDIxMTI0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlhNGVkYTA1NjUxMTc0NDk4NGExMjAyMjY4Yzc1OTAwOWQ2ZDgxOWJiOTE4M2I0ZTE1NDdhNDU2MzAxZjYxMzEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-7VmjU4WJYnAZ5sUpPrKGeGj8g-Yxelssv8BYLPjedI"
+        image:project2
     },
     {
         id: 3,
@@ -106,16 +112,34 @@ export const projects = [
         technologies: ["React", "Bootstrap", "Stripe"],
         githubLink: "https://github.com/azeemyaqoob/ppcleadstodeal-reactjs-laravel-mysql-stripe",
         liveLink: "http://ppcleadstodeals.com/",
-        image: "https://private-user-images.githubusercontent.com/52440392/360895912-d58590e9-a490-4e1c-b99b-121e9755a96b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTAxMDkxNjMsIm5iZiI6MTc1MDEwODg2MywicGF0aCI6Ii81MjQ0MDM5Mi8zNjA4OTU5MTItZDU4NTkwZTktYTQ5MC00ZTFjLWI5OWItMTIxZTk3NTVhOTZiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE2VDIxMjEwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZkNzE1ZTUzZTc4ZDM4YjhhNTQxZjliYWM3ZDZjNjQyZTNiNDc3OGYyNjVlNWE2NjFhODhlZGE5ZmI0MjYxZmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.giDwH_7pylTsqFW_kqFLLdhpGE8_cas81YFBNTOBzJk"
+        image:project3
+    },
+     {
+        id: 4,
+        title: "Elite Jeans Work Order",
+        description: "I developed Elite Jeans, a MERN stack platform for apparel management. The React/MUI frontend handles login, registration, and dashboard, while the Node/Express backend manages products, orders, and vendors. I integrated Stripe, email notifications, and frontend APIs, enabling spec uploads, tech packs, and role-based workflows for seamless operations.",
+        technologies: ["React", "Material UI", "Node JS", "MongoDB"],
+        githubLink: "https://github.com/azeemyaqoob/elite-jeans-mern-stack",
+        liveLink: "http://204.236.209.105/",
+        image:project4
     },
     {
-        id: 4,
+        id: 5,
         title: "Portfolio Website",
         description: "I designed and developed a responsive portfolio website with animations to showcase projects and skills. Implemented smooth transitions and interactive elements using Framer Motion and styled components for an engaging user experience.",
         technologies: ["React", "Framer Motion", "Styled Components"],
-        githubLink: "",
+        githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
         liveLink: "#",
-        image: "https://via.placeholder.com/400x250?text=Portfolio"
+        image: project5
+    },
+        {
+        id: 6,
+        title: "Ecommerce Jewelry Website",
+        description: "I designed and developed the full UI of this jewelry e-commerce site, including homepages, login, registration, password reset, and dashboard. Built with React.js, Laravel, and MySQL, I integrated secure payments and managed all frontend API connections for seamless product browsing, cart management, and order processing",
+        technologies: ["React JS", "Bootstrap", "Laravel", "MySQL"],
+        githubLink: "https://github.com/azeemyaqoob/ecommerce-jewelry-website-reactjs-mysql-laravel",
+        liveLink: "",
+        image: project6
     }
 ];
 

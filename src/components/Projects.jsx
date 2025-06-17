@@ -5,6 +5,8 @@ import { useInView } from "react-intersection-observer";
 import { projects } from "../data";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+
+
 const ProjectsContainer = styled.section`
   background: ${({ theme }) => theme.colors.primaryLight};
 `;
@@ -162,13 +164,15 @@ const Projects = () => {
                     >
                       <FaGithub /> Code
                     </ProjectLink>
-                    <ProjectLink
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt /> Live Demo
-                    </ProjectLink>
+                    {project.liveLink && (
+                      <ProjectLink
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt /> Live Demo
+                      </ProjectLink>
+                    )}
                   </ProjectLinks>
                 </ProjectContent>
               </ProjectCard>

@@ -43,7 +43,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <p>
-            Made with <HeartIcon /> by Your Name
+            Made with <HeartIcon /> by Azeem Yaqoob
           </p>
           <p>
             &copy; {new Date().getFullYear()} All Rights Reserved

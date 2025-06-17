@@ -3,14 +3,15 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { personalData } from "../data";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import qrcode from "./../assets/images/whatsapp.jpeg"
 const ContactContainer = styled.section``;
 
 const ContactContent = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  align-items: center;
 
   @media ${({ theme }) => theme.breakpoints.md} {
     grid-template-columns: 1fr;
@@ -65,63 +66,47 @@ const SocialLink = styled.a`
   }
 `;
 
-const ContactForm = styled(motion.form)`
+const WhatsAppSection = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  text-align: center;
 `;
 
-const FormGroup = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
+const QRCodeContainer = styled.div`
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+`;
+
+const QRCodeImage = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+`;
+
+const WhatsAppText = styled.p`
+  font-size: 1.1rem;
+  color: ${({ theme }) => theme.colors.paraTextColor};
+  max-width: 300px;
+`;
+
+const WhatsAppButton = styled.a`
+  display: inline-flex;
+  align-items: center;
   gap: 0.5rem;
-`;
-
-const FormLabel = styled.label`
-  font-size: 1rem;
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-const FormInput = styled.input`
-  padding: 1rem;
-  background: ${({ theme }) => theme.colors.primaryLight};
-  border: none;
+  padding: 0.8rem 1.5rem;
+  background: #25D366;
+  color: white;
   border-radius: 5px;
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 1rem;
-
-  &:focus {
-    outline: 2px solid ${({ theme }) => theme.colors.secondary};
-  }
-`;
-
-const FormTextarea = styled.textarea`
-  padding: 1rem;
-  background: ${({ theme }) => theme.colors.primaryLight};
-  border: none;
-  border-radius: 5px;
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 1rem;
-  resize: vertical;
-  min-height: 150px;
-
-  &:focus {
-    outline: 2px solid ${({ theme }) => theme.colors.secondary};
-  }
-`;
-
-const SubmitButton = styled(motion.button)`
-  padding: 1rem;
-  background: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.white};
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
+    background: #128C7E;
     transform: translateY(-3px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
@@ -132,34 +117,6 @@ const Contact = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    alert("Message sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -223,69 +180,31 @@ const Contact = () => {
               >
                 <FaLinkedin />
               </SocialLink>
-              {/* <SocialLink
-                href={personalData.socialLinks.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-              >
-                <FaTwitter />
-              </SocialLink> */}
             </SocialLinks>
           </ContactInfo>
-          <ContactForm
-            onSubmit={handleSubmit}
+          <WhatsAppSection
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <FormGroup>
-              <FormLabel>Name</FormLabel>
-              <FormInput
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
+            <motion.h3 variants={itemVariants}>Connect via WhatsApp</motion.h3>
+            <QRCodeContainer>
+              <QRCodeImage 
+                src={qrcode} // Replace with your actual QR code image path
+                alt="WhatsApp QR Code"
               />
-            </FormGroup>
-            <FormGroup>
-              <FormLabel>Email</FormLabel>
-              <FormInput
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </FormGroup>
-            <FormGroup>
-              <FormLabel>Subject</FormLabel>
-              <FormInput
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-            </FormGroup>
-            <FormGroup>
-              <FormLabel>Message</FormLabel>
-              <FormTextarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-            </FormGroup>
-            <SubmitButton
-              type="submit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </QRCodeContainer>
+            <WhatsAppText>
+              Scan the QR code or click below to start a conversation on WhatsApp
+            </WhatsAppText>
+            <WhatsAppButton
+              href={`https://wa.me/${personalData.phone.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Send Message
-            </SubmitButton>
-          </ContactForm>
+              <FaWhatsapp /> Chat on WhatsApp
+            </WhatsAppButton>
+          </WhatsAppSection>
         </ContactContent>
       </div>
     </ContactContainer>
