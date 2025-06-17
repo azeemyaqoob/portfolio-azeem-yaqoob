@@ -29,7 +29,7 @@ export const education = [
     {
         id: 2,
         degree: "Fsc (Pre-Engineering)",
-        institution: "Punjab Collage, Sialkot",
+        institution: "Punjab College, Sialkot",
         year: "2015 - 2017",
         description: "Focus on Software Development"
     }
