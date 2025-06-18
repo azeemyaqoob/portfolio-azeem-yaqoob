@@ -11,6 +11,7 @@ export const personalData = {
     phone: "+923430429793",
     address: "Lahore, Pakistan",
     about: "I'm a passionate full stack developer with expertise in building web applications using modern technologies. I love solving complex problems and creating efficient, scalable solutions.",
+    about1: "As a dedicated full stack developer, I specialize in crafting robust web applications using cutting-edge technologies. I thrive on tackling intricate challenges and delivering high-performance, scalable solutions that drive business success.",
     socialLinks: {
         github: "https://github.com/azeemyaqoob",
         linkedin: "https://www.linkedin.com/in/azeem-yaqoob/",
@@ -145,7 +146,7 @@ export const projects = [
 
 export const skills = [
     { name: "JavaScript", level: 90 },
-    { name: "React", level: 85 },
+    { name: "React js", level: 85 },
     { name: "Node.js", level: 80 },
     { name: "Express", level: 75 },
     { name: "MongoDB", level: 80 },
@@ -155,5 +156,10 @@ export const skills = [
     { name: "Git", level: 85 },
     { name: "TailwindCSS", level: 75 },
     { name: "Material UI", level: 80 },
-    { name: "Bitbucket", level: 85 }
+    { name: "Bitbucket", level: 85 },
+    { name: "Stripe Payment", level: 85 },
+    { name: "Bluehost", level: 80 },
+    { name: "Hostinger", level: 85 },
+    { name: "Custom CSS", level: 80 },
+    { name: "Bootstrap", level: 80 },
 ];

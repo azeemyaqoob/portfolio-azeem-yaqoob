@@ -127,7 +127,7 @@ const About = () => {
                         animate={inView ? "visible" : "hidden"}
                     >
                         <motion.h3 variants={itemVariants}>Full Stack Developer</motion.h3>
-                        <motion.p variants={itemVariants}>{personalData.about}</motion.p>
+                        <motion.p variants={itemVariants}>{personalData.about1}</motion.p>
                         <InfoList variants={containerVariants}>
                             <InfoItem>
                                 <motion.p variants={itemVariants}>
