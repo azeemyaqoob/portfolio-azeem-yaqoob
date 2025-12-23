@@ -157,6 +157,8 @@ const Projects = () => {
                     ))}
                   </ProjectTechnologies>
                   <ProjectLinks>
+
+                  {project.githubLink && (
                     <ProjectLink
                       href={project.githubLink}
                       target="_blank"
@@ -164,6 +166,7 @@ const Projects = () => {
                     >
                       <FaGithub /> Code
                     </ProjectLink>
+                  )}
                     {project.liveLink && (
                       <ProjectLink
                         href={project.liveLink}

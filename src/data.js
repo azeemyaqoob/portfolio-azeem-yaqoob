@@ -4,14 +4,16 @@ import project3 from "./assets/images/ppcleads to deal.png"
 import project4 from "./assets/images/elite jeans.png"
 import project5 from "./assets/images/portfolio.PNG"
 import project6 from "./assets/images/images.jpeg"
+import project7 from "./assets/images/zorli_homepage.png"
+import project8 from "./assets/images/autoweb.png"
 export const personalData = {
     name: "Azeem Yaqoob",
     role: "Full Stack Developer",
     email: "azeemyaqoob121@gmail.com",
     phone: "+923430429793",
     address: "Lahore, Pakistan",
-    about: "I'm a passionate full stack developer with expertise in building web applications using modern technologies. I love solving complex problems and creating efficient, scalable solutions.",
-    about1: "As a dedicated full stack developer, I specialize in crafting robust web applications using cutting-edge technologies. I thrive on tackling intricate challenges and delivering high-performance, scalable solutions that drive business success.",
+    about: "I'm a passionate full stack developer with expertise in building web applications using modern technologies and AI tools like Claude Code, Vercel VO, and Replit Agentic AI. I love solving complex problems and creating efficient, scalable solutions enhanced by AI-powered development.",
+    about1: "As a dedicated full stack developer, I specialize in crafting robust web applications using cutting-edge technologies. I thrive on tackling intricate challenges with AI augmentation tools (Claude Code, Vercel VO, Replit AI) and delivering high-performance, scalable solutions that drive business success through intelligent automation.",
     socialLinks: {
         github: "https://github.com/azeemyaqoob",
         linkedin: "https://www.linkedin.com/in/azeem-yaqoob/",
@@ -43,9 +45,11 @@ export const experience = [
         company: "Upwork (Freelance)",
         year: "Nov 2023 - Present",
         description: [
+            "- Use Agentic AI to make medium to large scale projects on Replit, vercel VO and Claude code",
             "- Designed and implemented high-performance web applications using modern React (Vite) with TypeScript, creating responsive UIs with Tailwind CSS and Material UI that improved client engagement by 30-40%",
             "- Architected and developed full-stack solutions with Node.js backend services, implementing RESTful APIs with Express.js and MongoDB for data persistence, optimizing database queries for 50% faster response times",
             "- Implemented CI/CD pipelines using Bitbucket and Git, reducing deployment times by 60% while maintaining 99.9% uptime for client applications",
+            
             //   "- Collaborated with international clients to translate business requirements into technical specifications, delivering 15+ projects with 100% client satisfaction"
         ]
     },
@@ -124,8 +128,37 @@ export const projects = [
         liveLink: "http://204.236.209.105/",
         image:project4
     },
-    {
+         {
         id: 5,
+        title: "Zorli Website",
+        description: "Zorli AI Vault is a secure, AI-powered digital vault designed for individuals, teams, and enterprises to store sensitive credentials, manage private data, and interact intelligently with documents using Retrieval-Augmented Generation (RAG) AI. It combines password management, document intelligence, and subscription-based access into a single, encrypted workspace available on web",
+        technologies: ["React JS", "Node js", "Supabase", "Stripe Payment"],
+        githubLink: "",
+        liveLink: "",
+        image: project7
+    },
+    {
+        id: 6,
+        title: "AutoWeb Outreach AI",
+        description: "Automated scraping of UK business directories to find your ideal clients, Lighthouse-based performance scoring to identify improvement opportunities, GPT-4 powered website preview generation tailored to each business, JWT-based authentication with refresh tokens for secure access ",
+        technologies: ["Next JS", "Google Places api", "Claude Code"],
+        githubLink: "https://github.com/azeemyaqoob/LeadGen-Evolution-Engine",
+        liveLink: "http://91.98.125.140/",
+        image: project8
+    },
+    
+        {
+        id: 7,
+        title: "Ecommerce Jewelry Website",
+        description: "I designed and developed the full UI of this jewelry e-commerce site, including homepages, login, registration, password reset, and dashboard. Built with React.js, Laravel, and MySQL, I integrated secure payments and managed all frontend API connections for seamless product browsing, cart management, and order processing",
+        technologies: ["React JS", "Bootstrap", "Laravel", "MySQL"],
+        githubLink: "https://github.com/azeemyaqoob/ecommerce-jewelry-website-reactjs-mysql-laravel",
+        liveLink: "",
+        image: project6
+    },
+     
+    {
+        id: 8,
         title: "Portfolio Website",
         description: "I designed and developed a responsive portfolio website with animations to showcase projects and skills. Implemented smooth transitions and interactive elements using Framer Motion and styled components for an engaging user experience.",
         technologies: ["React", "Framer Motion", "Styled Components"],
@@ -133,33 +166,33 @@ export const projects = [
         liveLink: "#",
         image: project5
     },
-        {
-        id: 6,
-        title: "Ecommerce Jewelry Website",
-        description: "I designed and developed the full UI of this jewelry e-commerce site, including homepages, login, registration, password reset, and dashboard. Built with React.js, Laravel, and MySQL, I integrated secure payments and managed all frontend API connections for seamless product browsing, cart management, and order processing",
-        technologies: ["React JS", "Bootstrap", "Laravel", "MySQL"],
-        githubLink: "https://github.com/azeemyaqoob/ecommerce-jewelry-website-reactjs-mysql-laravel",
-        liveLink: "",
-        image: project6
-    }
+      
 ];
 
 export const skills = [
-    { name: "JavaScript", level: 90 },
-    { name: "React js", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "Express", level: 75 },
-    { name: "MongoDB", level: 80 },
-    { name: "SQL", level: 75 },
+
+    { name: "Next JS", level: 95 },
+    { name: "React js", level: 95 },
+    { name: "Node.js", level: 90 },
+    { name: "Express", level: 95 },
+    { name: "Claude Code", level: 90 },
+    { name: "Git Copilot", level: 95 },
+    { name: "Vercel VO Agentic AI", level: 90 },
+    { name: "Replit Agentic AI", level: 90 },
+    { name: "MongoDB", level: 90 },
+    { name: "SQL", level: 95 },
     { name: "HTML/CSS", level: 95 },
-    { name: "TypeScript", level: 75 },
-    { name: "Git", level: 85 },
-    { name: "TailwindCSS", level: 75 },
-    { name: "Material UI", level: 80 },
-    { name: "Bitbucket", level: 85 },
-    { name: "Stripe Payment", level: 85 },
-    { name: "Bluehost", level: 80 },
+    { name: "JavaScript", level: 90 },
+    { name: "TypeScript", level: 85 },
+    { name: "Git", level: 95 },
+    { name: "TailwindCSS", level: 95 },
+    { name: "Material UI", level: 90 },
+    { name: "Bitbucket", level: 90 },
+    { name: "Stripe Payment", level: 95 },
+    { name: "Bluehost", level: 85 },
     { name: "Hostinger", level: 85 },
-    { name: "Custom CSS", level: 80 },
-    { name: "Bootstrap", level: 80 },
+    { name: "Custom CSS", level: 95 },
+    { name: "Bootstrap", level: 90 },
+    { name: "React Bootstrap", level: 85 },
+   
 ];
