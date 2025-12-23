@@ -194,5 +194,6 @@ export const skills = [
     { name: "Custom CSS", level: 95 },
     { name: "Bootstrap", level: 90 },
     { name: "React Bootstrap", level: 85 },
+    { name: "Wordpress", level: 95 },
    
 ];
