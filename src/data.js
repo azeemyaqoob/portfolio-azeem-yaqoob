@@ -6,6 +6,8 @@ import project5 from "./assets/images/portfolio.PNG"
 import project6 from "./assets/images/images.jpeg"
 import project7 from "./assets/images/zorli_homepage.png"
 import project8 from "./assets/images/autoweb.png"
+import project9 from "./assets/images/itech.PNG"
+import project10 from "./assets/images/torism.PNG"
 export const personalData = {
     name: "Azeem Yaqoob",
     role: "Full Stack Developer",
@@ -157,16 +159,33 @@ export const projects = [
         image: project6
     },
      
+    // {
+    //     id: 8,
+    //     title: "Portfolio Website",
+    //     description: "I designed and developed a responsive portfolio website with animations to showcase projects and skills. Implemented smooth transitions and interactive elements using Framer Motion and styled components for an engaging user experience.",
+    //     technologies: ["React", "Framer Motion", "Styled Components"],
+    //     githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
+    //     liveLink: "#",
+    //     image: project5
+    // },
     {
-        id: 8,
-        title: "Portfolio Website",
-        description: "I designed and developed a responsive portfolio website with animations to showcase projects and skills. Implemented smooth transitions and interactive elements using Framer Motion and styled components for an engaging user experience.",
-        technologies: ["React", "Framer Motion", "Styled Components"],
-        githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
-        liveLink: "#",
-        image: project5
+        id: 9,
+        title: "Itechx Technologies",
+        description: "For a digital marketing agency, I developed a professional WordPress website featuring service showcases for web design, SEO, and PPC. The project included custom page building for their portfolio, contact integration, and a responsive layout to enhance their online presence and lead generation.",
+        technologies: ["Wordpress"],
+        // githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
+        liveLink: "https://itechx.co.uk/",
+        image: project9
     },
-      
+       {
+        id: 10,
+        title: "Itechx Technologies",
+        description: "I designed and developed a fully responsive WordPress website for Moon Tours Oman, a premier travel agency. The project involved creating a comprehensive booking platform with dynamic tour packages, destination showcases, and an integrated inquiry form to streamline client reservations and enhance their online presence.",
+        technologies: ["Wordpress"],
+        // githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
+        liveLink: "https://moontoursom.com/",
+        image: project10
+    },
 ];
 
 export const skills = [
