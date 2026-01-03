@@ -179,7 +179,7 @@ export const projects = [
     },
        {
         id: 10,
-        title: "Itechx Technologies",
+        title: "Moon Tours Oman",
         description: "I designed and developed a fully responsive WordPress website for Moon Tours Oman, a premier travel agency. The project involved creating a comprehensive booking platform with dynamic tour packages, destination showcases, and an integrated inquiry form to streamline client reservations and enhance their online presence.",
         technologies: ["Wordpress"],
         // githubLink: "https://github.com/azeemyaqoob/portfolio-azeem-yaqoob",
