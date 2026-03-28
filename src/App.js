@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./assets/styles/GlobalStyles";
 import { theme } from "./assets/styles/theme";
@@ -12,19 +12,28 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+const ParticleBackground = React.lazy(() =>
+  import("./components/ParticleBackground")
+);
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
-      <Footer />
+      <Suspense fallback={null}>
+        <ParticleBackground />
+      </Suspense>
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 }

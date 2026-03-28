@@ -10,12 +10,12 @@ import project9 from "./assets/images/itech.PNG"
 import project10 from "./assets/images/torism.PNG"
 export const personalData = {
     name: "Azeem Yaqoob",
-    role: "Full Stack Developer",
+    role: "Senior Software Engineer",
     email: "azeemyaqoob121@gmail.com",
     phone: "+923430429793",
     address: "Lahore, Pakistan",
-    about: "I'm a passionate full stack developer with expertise in building web applications using modern technologies and AI tools like Claude Code, Vercel VO, and Replit Agentic AI. I love solving complex problems and creating efficient, scalable solutions enhanced by AI-powered development.",
-    about1: "As a dedicated full stack developer, I specialize in crafting robust web applications using cutting-edge technologies. I thrive on tackling intricate challenges with AI augmentation tools (Claude Code, Vercel VO, Replit AI) and delivering high-performance, scalable solutions that drive business success through intelligent automation.",
+    about: "I'm a Senior Software Engineer with 5+ years of expertise building enterprise-grade web applications using React, Next.js, Node.js, NestJS, Python, and Flask. I leverage AI tools like Claude Code, Vercel VO, and Replit Agentic AI to deliver scalable, high-performance solutions that drive real business impact.",
+    about1: "As a Senior Software Engineer, I architect and build robust full-stack applications using cutting-edge technologies including React, Next.js, NestJS, Python/Flask, and the MERN stack. I thrive on tackling complex challenges with AI augmentation tools (Claude Code, Vercel VO, Replit AI) and delivering high-performance, scalable solutions that drive business success through intelligent automation.",
     socialLinks: {
         github: "https://github.com/azeemyaqoob",
         linkedin: "https://www.linkedin.com/in/azeem-yaqoob/",
@@ -43,25 +43,23 @@ export const education = [
 export const experience = [
     {
         id: 1,
-        role: "Full Stack Developer Expert",
+        role: "Senior Software Engineer",
         company: "Upwork (Freelance)",
         year: "Nov 2023 - Present",
         description: [
-            "- Use Agentic AI to make medium to large scale projects on Replit, vercel VO and Claude code",
-            "- Designed and implemented high-performance web applications using modern React (Vite) with TypeScript, creating responsive UIs with Tailwind CSS and Material UI that improved client engagement by 30-40%",
-            "- Architected and developed full-stack solutions with Node.js backend services, implementing RESTful APIs with Express.js and MongoDB for data persistence, optimizing database queries for 50% faster response times",
-            "- Implemented CI/CD pipelines using Bitbucket and Git, reducing deployment times by 60% while maintaining 99.9% uptime for client applications",
-            
-            //   "- Collaborated with international clients to translate business requirements into technical specifications, delivering 15+ projects with 100% client satisfaction"
+            "- Leverage Agentic AI (Replit, Vercel VO, Claude Code) to architect and deliver medium to large-scale projects with accelerated development cycles",
+            "- Designed and implemented high-performance web applications using React (Vite), Next.js, and NestJS with TypeScript, creating responsive UIs with Tailwind CSS and Material UI that improved client engagement by 30-40%",
+            "- Architected and developed full-stack solutions with Node.js/NestJS and Python/Flask backend services, implementing RESTful APIs with Express.js, NestJS, and MongoDB for data persistence, optimizing database queries for 50% faster response times",
+            "- Implemented CI/CD pipelines using Bitbucket and Git, reducing deployment times by 60% while maintaining 99.9% uptime for client applications"
         ]
     },
     {
         id: 2,
-        role: "Senior Full Stack Developer",
+        role: "Senior Software Engineer",
         company: "360Synergytech Lahore",
         year: "July 2021 - Nov 2023",
         description: [
-            "- Spearheaded development of enterprise-grade web applications using React (Vite), Node.js, and TypeScript stack, implementing scalable architectures that handled 10,000+ daily active users",
+            "- Spearheaded development of enterprise-grade web applications using React (Vite), Node.js, NestJS, and TypeScript stack, implementing scalable architectures that handled 10,000+ daily active users",
             "- Managed and mentored a cross-functional team of 5 developers, establishing coding standards and review processes that reduced bugs by 45%",
             "- Optimized deployment workflows for Hostinger and Bluehost environments, implementing automated deployment scripts that cut deployment time by 70%",
             "- Introduced performance monitoring with custom dashboards, identifying and resolving bottlenecks that improved application response times by 60%"
@@ -69,12 +67,12 @@ export const experience = [
     },
     {
         id: 3,
-        role: "Full Stack Developer",
+        role: "Software Engineer",
         company: "Viltco Technologies (Arfa Karim Tower, Lahore)",
         year: "April 2020 - July 2021",
         description: [
             "- Engineered dynamic front-end interfaces with React, Material UI and Bootstrap, implementing responsive designs that improved mobile conversion rates by 25%",
-            "- Developed robust back-end services with Laravel and Node.js, creating REST APIs that served 50+ endpoints with 99.5% reliability",
+            "- Developed robust back-end services with Laravel, Node.js, and Python/Flask, creating REST APIs that served 50+ endpoints with 99.5% reliability",
             "- Implemented comprehensive Git workflows across the development team, reducing merge conflicts by 80% and improving code quality",
             "- Designed and optimized SQL database schemas that improved query performance by 40% for data-intensive applications"
         ]
@@ -193,7 +191,10 @@ export const skills = [
     { name: "Next JS", level: 95 },
     { name: "React js", level: 95 },
     { name: "Node.js", level: 90 },
+    { name: "NestJS", level: 90 },
     { name: "Express", level: 95 },
+    { name: "Python", level: 85 },
+    { name: "Flask", level: 85 },
     { name: "Claude Code", level: 90 },
     { name: "Git Copilot", level: 95 },
     { name: "Vercel VO Agentic AI", level: 90 },

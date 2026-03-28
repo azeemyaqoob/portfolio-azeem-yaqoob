@@ -3,126 +3,177 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { experience } from "../data";
+import { FaBriefcase } from "react-icons/fa";
 
-const ExperienceContainer = styled.section``;
+const ExperienceContainer = styled.section`
+  position: relative;
+  overflow: hidden;
+`;
+
+const ExperienceGlow = styled.div`
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.06;
+  background: ${({ theme }) => theme.colors.secondary};
+  top: 30%;
+  right: -100px;
+  pointer-events: none;
+`;
 
 const Timeline = styled.div`
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 0;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 30px;
     width: 2px;
     height: 100%;
-    background: ${({ theme }) => theme.colors.secondary};
+    background: linear-gradient(
+      180deg,
+      ${({ theme }) => theme.colors.secondary},
+      ${({ theme }) => theme.colors.accent},
+      transparent
+    );
 
-    @media ${({ theme }) => theme.breakpoints.md} {
-      left: 2rem;
+    @media ${({ theme }) => theme.breakpoints.sm} {
+      left: 20px;
     }
   }
 `;
 
 const TimelineItem = styled(motion.div)`
   position: relative;
-  margin-bottom: 3rem;
-  padding-left: 4rem;
+  margin-bottom: 2.5rem;
+  padding-left: 70px;
 
-  @media ${({ theme }) => theme.breakpoints.md} {
-    padding-left: 5rem;
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    padding-left: 55px;
   }
 
   &:last-child {
     margin-bottom: 0;
   }
+`;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: ${({ theme }) => theme.colors.secondary};
-    transform: translateX(-50%);
+const TimelineDot = styled.div`
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.colors.primary};
+  border: 3px solid ${({ theme }) => theme.colors.secondary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 
-    @media ${({ theme }) => theme.breakpoints.md} {
-      left: 2rem;
-    }
+  svg {
+    font-size: 0.6rem;
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    left: 8px;
   }
 `;
 
 const TimelineContent = styled.div`
-  background: ${({ theme }) => theme.colors.primaryLight};
+  background: ${({ theme }) => theme.colors.cardBg};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 15px 30px -10px ${({ theme }) => theme.colors.secondaryGlow};
+  }
+`;
+
+const TimelineHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+`;
+
+const TimelineTitle = styled.h3`
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 `;
 
 const TimelineYear = styled.span`
   display: inline-block;
-  background: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.secondaryGlow};
+  color: ${({ theme }) => theme.colors.secondary};
   padding: 0.3rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  white-space: nowrap;
 `;
 
-const TimelineTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-const TimelineSubtitle = styled.h4`
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: ${({ theme }) => theme.colors.paraTextColor};
+const TimelineCompany = styled.h4`
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  color: ${({ theme }) => theme.colors.accent};
+  font-weight: 600;
 `;
 
 const TimelineDescription = styled.ul`
-  list-style-type: disc;
-  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 `;
 
 const TimelineDescriptionItem = styled.li`
-  font-size: 1rem;
+  font-size: 0.92rem;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.paraTextColor};
+  position: relative;
+  padding-left: 1.2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: ${({ theme }) => theme.colors.secondary};
+  }
 `;
 
 const Experience = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -30 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   };
 
   return (
     <ExperienceContainer id="experience" ref={ref}>
+      <ExperienceGlow />
       <div className="container">
         <motion.h2
           className="section-title"
@@ -140,14 +191,19 @@ const Experience = () => {
           <Timeline>
             {experience.map((exp, index) => (
               <TimelineItem key={index} variants={itemVariants}>
+                <TimelineDot>
+                  <FaBriefcase />
+                </TimelineDot>
                 <TimelineContent>
-                  <TimelineYear>{exp.year}</TimelineYear>
-                  <TimelineTitle>{exp.role}</TimelineTitle>
-                  <TimelineSubtitle>{exp.company}</TimelineSubtitle>
+                  <TimelineHeader>
+                    <TimelineTitle>{exp.role}</TimelineTitle>
+                    <TimelineYear>{exp.year}</TimelineYear>
+                  </TimelineHeader>
+                  <TimelineCompany>{exp.company}</TimelineCompany>
                   <TimelineDescription>
                     {exp.description.map((item, i) => (
                       <TimelineDescriptionItem key={i}>
-                        {item}
+                        {item.replace(/^- /, "")}
                       </TimelineDescriptionItem>
                     ))}
                   </TimelineDescription>
